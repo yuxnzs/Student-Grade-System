@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/src">
+        <file>images/student.png</file>
+        <file>images/drop-down-arrow.png</file>
+    </qresource>
+</RCC>
