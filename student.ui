@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Student Grade Management System</string>
+   <string>學生成績管理系統</string>
   </property>
   <property name="windowIcon">
    <iconset resource="images.qrc">
@@ -74,7 +74,7 @@
       <item>
        <widget class="QLabel" name="lblID">
         <property name="text">
-         <string>ID:</string>
+         <string>ID：</string>
         </property>
        </widget>
       </item>

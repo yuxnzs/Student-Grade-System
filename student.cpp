@@ -35,10 +35,10 @@ Student::Student(QWidget *parent)
 
     // 設置下拉選單內容
     ui->comboBoxSortField->addItem("ID");
-    ui->comboBoxSortField->addItem("Grade");
+    ui->comboBoxSortField->addItem("成績");
 
-    ui->comboBoxSortOrder->addItem("Ascending");
-    ui->comboBoxSortOrder->addItem("Descending");
+    ui->comboBoxSortOrder->addItem("升序");
+    ui->comboBoxSortOrder->addItem("降序");
 
     // 為 UI 設定 CSS
     qApp->setStyleSheet(
@@ -108,7 +108,7 @@ void Student::createDatabase() {
     sqldb = QSqlDatabase::addDatabase("QSQLITE");
 
     // 設置資料庫文件的名稱（路徑）
-    sqldb.setDatabaseName("StudentMis.db");
+    sqldb.setDatabaseName("Student.db");
 
     // 打開資料庫並根據結果顯示消息
     if (!sqldb.open()) {
@@ -143,7 +143,7 @@ void Student::createTable() {
 void Student::btnSort_clicked() {
     // 根據用戶選擇設定排序方式
     QString field = ui->comboBoxSortField->currentText() == "ID" ? "id" : "grade";
-    QString order = ui->comboBoxSortOrder->currentText() == "Ascending" ? "ASC" : "DESC";
+    QString order = ui->comboBoxSortOrder->currentText() == "升序" ? "ASC" : "DESC";
 
     QString strQuery = QString("SELECT * FROM Students ORDER BY %1 %2").arg(field, order);
 
