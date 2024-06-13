@@ -14,8 +14,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class Student; }
 QT_END_NAMESPACE
 
-class Student : public QDialog
-{
+class Student : public QDialog {
     Q_OBJECT
 
 public:
